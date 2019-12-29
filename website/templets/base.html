@@ -1,0 +1,29 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pankaj Articles can be found here</title>
+    <link rel="stylesheet" href="{% static 'css/basestyle.css' %}">
+</head>
+<body>
+    
+    <header>
+        <h1><a href="/">My personal blog</a></h1>
+    </header>
+    <div class="new">
+        <h3><a href="{% url 'new_article' %}" >Add new article</a></h3>
+    </div>
+
+    <div class="conatiner">
+
+        {% block content %}
+        {% endblock content %}
+
+    </div>
+
+</body>
+</html>
